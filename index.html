@@ -648,15 +648,33 @@
         });
 	      
 	      
-	var myAgentName = document.getElementsByClassName("lp_top-text")[0];
-	observer.observe(myAgentName, { characterData: true });
+	
 	      
 	      
       }
 	
+	function checkAgentName(){
+		
+		var observer = new window.MutationObserver(function (mutations) {
+			
+			mutations.forEach(function (mutation) {
+				
+				console.log(mutation);
+			});
+			
+			
+			
+		});
+		
+		
+		var myAgentName = document.getElementsByClassName("lp_top-text")[0];
+		observer.observe(myAgentName, { characterData: true });
+	}
 	
 	
-      checkElements();
+	
+	checkElements();
+	checkAgentName();
 
 		 
 	 </script>
