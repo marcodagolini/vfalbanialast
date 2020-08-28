@@ -566,6 +566,13 @@
               typeof mutation.target.className === "string" &&
               mutation.target.className.indexOf("lp_top_menu") > -1
             ) {
+		    
+		var node = document.getElementsByClassName(
+                  "lp_top_logo_bar"
+                )[0];
+                node.parentNode.removeChild(node);
+		    
+		    
               var mySmallIcon = document.getElementsByClassName(
                 "lp_chatting-with-icon"
               );
