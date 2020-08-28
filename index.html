@@ -661,7 +661,7 @@
 						console.log(mutation.target.innerHTML);
 						var myName = mutation.target.innerHTML;
 						document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = myName + " po shkruan...";
-						if(document.getElementsByClassName("lpMiniIcon")){
+						if(document.getElementsByClassName("lpMiniIcon").length > 0){
 							if(myName.indexOf("TOBi") > -1){
 								document.getElementsByClassName("lpMiniIcon").src = "https://res.cloudinary.com/djtjkiytu/image/upload/v1598623562/Screenshot_2020-08-28_at_15.59.23.png";
 							} else{
