@@ -658,7 +658,7 @@
 				if (typeof mutation.target.className === "string") {
 					
 					console.log(mutation.target.innerHTML);
-					document.getElementsByClassName("lp_lpview_agent_is_typing")[0].textContent = mutation.target.innerHTML
+					document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = mutation.target.innerHTML + " po shkruan...";
 				
 				}
 				
