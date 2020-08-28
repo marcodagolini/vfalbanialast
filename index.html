@@ -679,7 +679,10 @@
 		
 		var myAgentName = document.querySelector('.lp_top-text');
 		var config = { characterData: true, attributes: true, childList: true, subtree: true };
-		observer.observe(myAgentName, config);
+		if(myAgentName){
+			observer.observe(myAgentName, config);
+		}
+		
 	}
 	
 	
