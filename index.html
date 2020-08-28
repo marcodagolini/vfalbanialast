@@ -661,7 +661,8 @@
 		
 		
 		var myAgentName = document.getElementsByClassName("lp_top-text")[0];
-		observer.observe(myAgentName, { characterData: true });
+		var config = { characterData: true, attributes: false, childList: false, subtree: true };
+		observer.observe(myAgentName, config);
 	}
 	
 	
