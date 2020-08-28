@@ -542,7 +542,7 @@
       function checkElements() {
         var observer = new window.MutationObserver(function (mutations) {
           mutations.forEach(function (mutation) {
-            // console.log(mutation);
+            console.log(mutation);
 
             if (
               typeof mutation.target.className === "string" &&
@@ -558,14 +558,7 @@
               document.getElementsByClassName("lp_rotator")[0].innerHTML = "";
             }
 		  
-	    if (
-              typeof mutation.target.className === "string" &&
-              mutation.target.className.indexOf("lp_lpview_agent_is_typing") > -1
-            ) {
-              console.log("okokokokok");
-            }
-		  
-		  
+	    
 
             if (
               typeof mutation.target.className === "string" &&
