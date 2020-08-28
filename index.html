@@ -661,6 +661,8 @@
 					if(myElement){
 						console.log(mutation.target.innerHTML);
 						document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = mutation.target.innerHTML + " po shkruan...";
+						var div = document.getElementsByClassName("lp_header")[0]
+						div.innerHTML = "Ciao";
 					}
 					
 					
