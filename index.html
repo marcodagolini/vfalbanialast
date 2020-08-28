@@ -557,6 +557,15 @@
               // document.getElementsByClassName('lp_rotator')[0].innerHTML = "<img src='https://res.cloudinary.com/djtjkiytu/image/upload/v1585247439/Screenshot_2020-03-26_at_19.25.34.png'>"
               document.getElementsByClassName("lp_rotator")[0].innerHTML = "";
             }
+		  
+	    if (
+              typeof mutation.target.className === "string" &&
+              mutation.target.className.indexOf("lp_lpview_agent_is_typing") > -1
+            ) {
+              console.log("okokokokok");
+            }
+		  
+		  
 
             if (
               typeof mutation.target.className === "string" &&
