@@ -144,9 +144,15 @@
 	
 	
 	function letsClick(data, eventInfo){
-		setTimeout(function(){
-			jQuery(".chips-item").trigger('click');
+		
+		var refreshIntervalTextBox;
+		refreshIntervalTextBox = setInterval(function () {
+			if (jQuery(".chips-item").length > 0) {
+				jQuery(".chips-item").trigger('click');
+				clearInterval(refreshIntervalTextBox);
+			}
 		}, 100);
+		
 	}
 	
 	
