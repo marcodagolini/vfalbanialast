@@ -659,13 +659,29 @@
 					
 					if(myElement){
 						console.log(mutation.target.innerHTML);
-						document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = mutation.target.innerHTML + " po shkruan...";
-						var divs = document.getElementsByClassName("lp_header");
-						var myCount = divs.length;
-						for (var a = 0; a < myCount; a ++){
-							var div = document.getElementsByClassName("lp_header")[a];
-							div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598617367/Screenshot_2020-08-28_at_14.22.18.png">' + div.innerHTML;
+						var myName = mutation.target.innerHTML;
+						document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = myName + " po shkruan...";
+						if(document.getElementsByClassName("lpMiniIcon")){
+							if(myName.indexOf("TOBi") > -1){
+								document.getElementsByClassName("lpMiniIcon").src = "https://res.cloudinary.com/djtjkiytu/image/upload/v1598623562/Screenshot_2020-08-28_at_15.59.23.png";
+							} else{
+								document.getElementsByClassName("lpMiniIcon").src = "https://res.cloudinary.com/djtjkiytu/image/upload/v1598623558/Screenshot_2020-08-28_at_15.59.15.png";
+							}
+						} else{
+							var divs = document.getElementsByClassName("lp_header");
+							var myCount = divs.length;
+							for (var a = 0; a < myCount; a ++){
+								var div = document.getElementsByClassName("lp_header")[a];
+								if(myName.indexOf("TOBi") > -1){
+									div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623562/Screenshot_2020-08-28_at_15.59.23.png">' + div.innerHTML;
+								} else{
+									div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623558/Screenshot_2020-08-28_at_15.59.15.png">' + div.innerHTML;
+								}
+								
+								a = myCount;
+							}
 						}
+						
 						
 					}
 					
