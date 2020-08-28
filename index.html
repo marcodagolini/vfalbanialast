@@ -667,17 +667,13 @@
 							}
 						} else{
 							var divs = document.getElementsByClassName("lp_header");
-							var myCount = divs.length;
-							for (var a = 0; a < myCount; a ++){
-								var div = document.getElementsByClassName("lp_header")[a];
-								if(myName.indexOf("TOBi") > -1){
-									div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623562/Screenshot_2020-08-28_at_15.59.23.png">' + div.innerHTML;
-								} else{
-									div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623558/Screenshot_2020-08-28_at_15.59.15.png">' + div.innerHTML;
-								}
-								
-								a = myCount;
-							}
+							var div = document.getElementsByClassName("lp_header")[1];
+							if(myName.indexOf("TOBi") > -1){
+								div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623562/Screenshot_2020-08-28_at_15.59.23.png">' + div.innerHTML;
+							} else{
+								div.innerHTML = '<img class="lpMiniIcon" style="height:100%;float: left;" src="https://res.cloudinary.com/djtjkiytu/image/upload/v1598623558/Screenshot_2020-08-28_at_15.59.15.png">' + div.innerHTML;
+							}	
+
 						}
 						
 						
