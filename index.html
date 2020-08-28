@@ -14,7 +14,7 @@
 <style>
 	
 @font-face {
-	font-family: myVF;
+	font-family: VodafoneRegular;
 	src: url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.ttf');
 	src: url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 		 url('https://marcodagolini.github.io/vfalbania2/Fonts/VFreg.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -36,7 +36,7 @@
     margin-left: 60px;
     font-size: 12.5px;
     color: #4a4d4e;
-    font-family: myVF;
+    font-family: VodafoneRegular,Arial;
   }
   .header_text_lp {
     float: left;
@@ -60,7 +60,7 @@
     bottom: 5px;
     left: 10px;
     margin: 20px 20px;
-    font-family: myVF;
+    font-family: VodafoneRegular,Arial;
     width: 289px;
   }
   .startChat_lp:hover {
@@ -75,7 +75,7 @@
   }
 
   .showContainer_lp {
-    background: url(https://www.vodafone.al/ext_files/TOBi/Tobi_icon_start.png)
+    background: url(https://www.vodafone.al/ext_files/TOBi/icon_shadow.png)
       no-repeat;
     background-size: cover;
     width: 100px;
@@ -107,7 +107,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 1px transparent;
     border-radius: 10px;
-    font-family: myVF;
+    font-family: VodafoneRegular,Arial;
   }
 
   .header_disclaimer_lp {
@@ -162,10 +162,7 @@
         }
       }
 
-      function offeredOrNot() {
-	      
-
-	      
+      function offeredOrNot() {	      
 	      if(window.innerWidth > 1025){
 		      jQuery('.LPMcontainer').css('z-index', 100)
 	      } else{
@@ -179,9 +176,7 @@
 			      jQuery(".engagement_lp").css("bottom", "74px");
 		      }
 	      }
-	      
-
-	      
+	      	      
 	      jQuery(window).resize(function() {
 		      if(window.innerWidth > 1025){
 			      jQuery('.LPMcontainer').css('z-index', 100)
@@ -251,8 +246,8 @@
 
       function sendLocation() {
         setTimeout(function () {
-          // var CurrentLocation = window.location.href;
-          // lpTag.newPage(CurrentLocation, { section: "production" });
+          var CurrentLocation = window.location.href;
+          lpTag.newPage(CurrentLocation, { section: "production" });
           lpTag.sdes.push({
             type: "ctmrinfo",
             info: {
@@ -455,7 +450,7 @@
               "Your session has expired. Please close this window and start a new conversation in order to resume.",
             sharkSessionExpired:
               "Please refresh the page and start a new conversation.",
-            agentIsTypingText: "{{agentName}} po shkruan...",
+            agentIsTypingText: "Agjenti po shkruan...",
             forget_me_dialog:
               "Are you sure you want to clear your conversation history?",
             forget_me_dialog_subtitle_on_active_chat:
@@ -658,8 +653,6 @@
                 }
               }, 100);
             }
-		  
-		  /******** commented after the security check to show the attachment icon *************
 
             if (
               typeof mutation.target.className === "string" &&
@@ -677,12 +670,6 @@
                 jQuery(".lp_input_area").css("left", "10px");
               }
             }
-	    
-	    
-	    ********/
-	    
-	    
-	    
           });
         });
 
