@@ -663,8 +663,13 @@
 					if(myElement){
 						console.log(mutation.target.innerHTML);
 						document.getElementsByClassName("lp_lpview_agent_is_typing")[0].innerHTML = mutation.target.innerHTML + " po shkruan...";
-						var div = document.getElementsByClassName("lp_header")[0]
-						div.innerHTML = "Ciao";
+						var divs = document.getElementsByClassName("lp_header");
+						var myCount = divs.length;
+						for (var a = 0; a < myCount; a ++){
+							var div = document.getElementsByClassName("lp_header")[a];
+							div.innerHTML = "<img src=\"https://res.cloudinary.com/djtjkiytu/image/upload/v1598617367/Screenshot_2020-08-28_at_14.22.18.png\">" + div.innerHTML;
+						}
+						
 					}
 					
 					
