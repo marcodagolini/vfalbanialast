@@ -559,7 +559,12 @@
               document.getElementsByClassName("lp_rotator")[0].innerHTML = "";
             }
 		  
-	    
+	    if (
+              typeof mutation.target.className === "string" &&
+              mutation.target.className.indexOf("lp_top-text") > -1
+            ) {
+              console.log("okokokokokok");
+            }
 
             if (
               typeof mutation.target.className === "string" &&
@@ -642,6 +647,10 @@
           subtree: true
         });
       }
+	
+	var myAgentName = document.getElementsByClassName("lp_top-text")[0];
+	observer.observe(myAgentName, { characterData: true });
+	
       checkElements();
 
 		 
