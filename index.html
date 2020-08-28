@@ -649,14 +649,18 @@
       }
 	
 	function checkAgentName(){
-		
-		console.log("inside");
-		
+			
 		var observer = new window.MutationObserver(function (mutations) {
 			
 			mutations.forEach(function (mutation) {
 				
-				console.log(mutation);
+				if (typeof mutation.target.className === "string") {
+					
+					console.log(mutation.taget.innerHTML);
+				
+				}
+				
+				
 			});
 			
 			
