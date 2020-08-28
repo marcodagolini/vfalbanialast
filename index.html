@@ -620,11 +620,11 @@
 		  
 	    if (
               typeof mutation.target.className === "string" &&
-              mutation.target.className.indexOf("lp_menu-top-icon") > -1
+              mutation.target.className.indexOf("lp_header") > -1
             ) {
 		    console.log("ok");
               if (
-                document.getElementsByClassName("lp_menu-top-icon").length > 0
+                document.getElementsByClassName("lp_header").length > 0
               ) {
                 var node = document.getElementsByClassName(
                   "lp_top_logo_bar"
