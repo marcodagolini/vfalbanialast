@@ -563,7 +563,8 @@
               typeof mutation.target.className === "string" &&
               mutation.target.className.indexOf("lp_top-text") > -1
             ) {
-              addLanguage();
+		    addLanguage();
+		    checkAgentName();
             }
 
             if (
@@ -668,7 +669,7 @@
 	
 	
 	checkElements();
-	checkAgentName();
+	
 
 		 
 	 </script>
