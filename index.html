@@ -566,6 +566,11 @@
               typeof mutation.target.className === "string" &&
               mutation.target.className.indexOf("lp_top-text") > -1
             ) {
+		    var myLength = document.getElementsByClassName("lp_top-text").length;
+		    for(var a = 0; a < myLength; a++){
+			 document.getElementsByClassName("lp_top-text")[a].innerHTML = "Na shkruaj"   
+		    }
+		    
 		    addLanguage();
 		    checkAgentName();
             }
