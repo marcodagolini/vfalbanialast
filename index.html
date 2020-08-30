@@ -681,7 +681,9 @@
 								document.getElementsByClassName("lpMiniIcon").src = "https://www.vodafone.al/ext_files/TOBi/Icon_header_chat.jpg";
 							}
 						} else{
-							var div = document.getElementsByClassName("lp_top-text")[1];
+							var div = document.getElementsByClassName("lp_title")[1];
+							div.style.paddingTop='3px';
+							div = document.getElementsByClassName("lp_top-text")[1];
 							div.style.paddingTop='5px';
 							if(myName.indexOf("TOBi") > -1){
 								div.innerHTML = '<img class="lpMiniIcon" style="height:80%;float: left;margin-right: 5px;margin-top: -5px;" src="https://www.vodafone.al/ext_files/TOBi/Icon_header_agent.jpg">' + div.innerHTML;
